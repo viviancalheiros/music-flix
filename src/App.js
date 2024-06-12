@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Banner from "./components/Banner";
+import Container from "./components/Container";
+import Card from "./components/Card";
+import lovesong from "./json/lovesong.json";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Banner image="claquete-banner.jpg" />
+      <Container>
+        <h2>Love Song</h2>
+        <section className="cards">
+          {lovesong.map((music) => <Card id={music.id} key={music.id} />)}
+        </section>
+      </Container>
+      <Footer />
+    </>
   );
 }
 

@@ -1,0 +1,5 @@
+O HTML dentro do React JS é chamado de JSX
+O uso do props se faz:
+  - 1: define um parâmetro na função
+  - 2: coloca a parte que quer substituir assim `${}`
+  (ver Cards.js)
